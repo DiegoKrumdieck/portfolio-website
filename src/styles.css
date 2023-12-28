@@ -2,6 +2,10 @@
 
 body {
     background-image: url("https://unblast.com/wp-content/uploads/2021/01/Space-Background-Image-6.jpg");
-    background-position: center top;
-    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html {
+    height: 100%;
 }
