@@ -1,15 +1,26 @@
-<app-nav-bar></app-nav-bar>
+<div class="nav-bar">
+    <div class="title">Diego Rodriguez-Krumdieck</div>
+    <nav style="float: inline-end; ">
+        <a class="button" [ngClass]="{activebutton: homeActive}" (click)="changeActive('home');scrollTo(home)">Home</a>
+        <a class="button" [ngClass]="{activebutton: aboutActive}" (click)="changeActive('about');scrollTo(about)"
+            (click)="scrollTo(about)">About</a>
+        <a class="button" [ngClass]="{activebutton: projectsActive}"
+            (click)="changeActive('projects');scrollTo(projects)" (click)="scrollTo(projects)">Projects</a>
+        <a class="button" [ngClass]="{activebutton: contactActive}" (click)="changeActive('contact');scrollTo(contact)"
+            (click)="scrollTo(contact)">Contact</a>
+    </nav>
+</div>
 <div class="container-sections">
-    <div class="section">
+    <div class="section" #home id="home">
         <app-home></app-home>
     </div>
-    <div class="section">
+    <div class="section" #about id="about">
         <app-about></app-about>
     </div>
-    <div class="section">
+    <div class="section" #projects id="projects">
         <app-projects></app-projects>
     </div>
-    <div class="section">
+    <div class="section" #contact id="contact">
         <app-contact></app-contact>
     </div>
 </div>
